@@ -13,11 +13,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Article {
-  id                 Int     @id @default(autoincrement())
-  publisher_logo_url String
-  title              String
-  story_id           Int
-  publisher_name     String
-  publisher_id       Int
+
+model Image {
+  id   Int    @id @default(autoincrement())
+  name String
+  data Json 
 }
